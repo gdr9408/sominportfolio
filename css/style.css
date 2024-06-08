@@ -1,0 +1,941 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Abel&family=Inika&family=Audiowide&family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: url(../img/bg.jpg) center fixed;
+  font-size: 62.5%;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.rel {
+  position: relative;
+}
+
+/*
+figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 150%;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    transition: 0.3s ease-in;
+  }
+}
+    */
+.h2 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 4rem;
+}
+@media (max-width:1200px) {
+  .h2 {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width:768px) {
+  .h2 {
+    font-size: 3rem;
+  }
+}
+
+header nav {
+  position: fixed;
+  width: 100%;
+  font-family: "Teko", sans-serif;
+  height: 10rem;
+  z-index: 2;
+}
+header nav .menu {
+  height: inherit;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4rem;
+  margin-right: 12rem;
+}
+header nav .menu li a {
+  font-size: 5rem;
+  padding: 0.5rem;
+  transition: font-size 0.3s;
+}
+header nav .menu li a:hover {
+  font-size: 6rem;
+}
+
+.up {
+  color: #fff;
+  font-size: 5rem;
+  position: fixed;
+  bottom: 10rem;
+  right: 10rem;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  display: none;
+}
+.up:hover {
+  opacity: 1;
+  font-size: 6rem;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: 0.3s;
+}
+main .home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .home .home_text {
+  font-family: "Audiowide", sans-serif;
+  font-size: 10rem;
+  line-height: 1.5;
+  transition: 0.5s;
+}
+main .home img {
+  transition: 0.3s;
+}
+main .project {
+  height: 100vh;
+  position: relative;
+}
+main .project .swiper {
+  width: 100%;
+  height: 70rem;
+  position: absolute;
+  top: calc(50% - 30rem);
+}
+main .project .swiper .swiper-slide {
+  display: flex;
+  width: 100rem;
+  height: 90%;
+}
+main .project .swiper .swiper-slide img {
+  display: block;
+  width: 50%;
+  object-fit: contain;
+  transition: 0.3s;
+}
+main .project .swiper .swiper-slide .project_text {
+  font-family: "Nanum Gothic Coding", monospace;
+  text-align: end;
+  line-height: 1.5;
+  margin: auto;
+  transition: 0.5s;
+}
+main .project .swiper .swiper-slide .project_text .poroject_title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #999;
+}
+main .project .swiper .swiper-slide .project_text .poroject_title b {
+  font-size: 6rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgb(255, 255, 255);
+}
+main .project .swiper .swiper-slide .project_text .poroject_title span {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+main .project .swiper .swiper-slide .project_text .project_tools {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+main .project .swiper .swiper-slide .project_text .contribution {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+main .project .swiper .swiper-slide .project_text .more {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 999rem;
+  padding: 1rem 5rem;
+  font-size: 3rem;
+  font-family: "Inika", serif;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+main .project .swiper .swiper-slide .project_text .more:hover {
+  background: #fff;
+  color: #222;
+  transform: translateY(0.5rem);
+}
+main .project .swiper .swiper-slide .project_text > p > span {
+  color: #999;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+main .project .swiper .swiper-button-prev, main .project .swiper .swiper-button-next {
+  color: #fff;
+  transition: 0.3s;
+}
+main .project .swiper .swiper-button-prev:hover, main .project .swiper .swiper-button-next:hover {
+  transform: scale(1.2);
+}
+main .project .swiper .swiper-button-prev {
+  margin-left: 1rem;
+}
+main .project .swiper .swiper-button-next {
+  margin-right: 1rem;
+}
+main .project .swiper .swiper-pagination-bullet {
+  background: #dfdfdf;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+main .project .swiper .swiper-pagination-bullet-active {
+  background: #fff;
+}
+main .about {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main .about .about_wrap {
+  background: rgba(51, 89, 48, 0.2);
+  border-radius: 10rem;
+  box-shadow: 0 0 5rem rgba(255, 255, 255, 0.2);
+  width: 100rem;
+  height: 70rem;
+  margin: auto;
+  padding: 4rem 6.5rem;
+  transition: 0.3s;
+  position: absolute;
+  top: calc(50% - 35rem);
+}
+main .about .about_wrap .profile {
+  margin-bottom: 3rem;
+}
+main .about .about_wrap .profile .h2 {
+  margin-bottom: 3rem;
+}
+main .about .about_wrap .profile .profile_info {
+  display: flex;
+  gap: 5rem;
+}
+main .about .about_wrap .profile .profile_info img {
+  width: 18rem;
+  height: 24rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin-right: 3rem;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text {
+  margin-top: 1rem;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text p {
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2.3rem;
+  color: #9c9c9c;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text p .pc_no {
+  display: none;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text p span {
+  font-size: 3rem;
+  margin-left: 1rem;
+  color: #eeeeee;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text p:nth-child(3) {
+  margin-bottom: 1rem;
+}
+main .about .about_wrap .profile .profile_info .profile_info_text p:last-child {
+  color: #eeeeee;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  line-height: 3rem;
+}
+main .about .about_wrap .skill .h2 {
+  margin-bottom: 3.5rem;
+}
+main .about .about_wrap .skill .skill_line {
+  background: url(../img/skill_line.png) no-repeat center/contain;
+  width: 85rem;
+  height: 15rem;
+  transition: 0.3s;
+}
+main .about .about_wrap .skill .skill_line > div {
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+}
+main .about .about_wrap .skill .skill_line > div p {
+  font-family: "Audiowide", sans-serif;
+  display: inline-block;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+main .about .about_wrap .skill .skill_line > div p.fade {
+  opacity: 1;
+}
+main .about .about_wrap .skill .skill_line .photoshop {
+  background: url(../img/skill1.png) no-repeat center/cover;
+  width: 6rem;
+  height: 6rem;
+  top: -3rem;
+  left: 29rem;
+}
+main .about .about_wrap .skill .skill_line .photoshop p {
+  font-size: 1.4rem;
+  line-height: 6rem;
+}
+main .about .about_wrap .skill .skill_line .Javascript {
+  background: url(../img/skill2.png) no-repeat center/cover;
+  width: 9rem;
+  height: 9rem;
+  bottom: -5rem;
+  left: 36.5rem;
+}
+main .about .about_wrap .skill .skill_line .Javascript p {
+  font-size: 2rem;
+  line-height: 9rem;
+}
+main .about .about_wrap .skill .skill_line .Jquery {
+  background: url(../img/skill3.png) no-repeat center/cover;
+  width: 8rem;
+  height: 8rem;
+  bottom: -3rem;
+  right: 15rem;
+}
+main .about .about_wrap .skill .skill_line .Jquery p {
+  font-size: 2rem;
+  line-height: 8rem;
+}
+main .about .about_wrap .skill .skill_line .css {
+  background: url(../img/skill4.png) no-repeat center/cover;
+  width: 8rem;
+  height: 8rem;
+  bottom: -3.5rem;
+  left: 13rem;
+}
+main .about .about_wrap .skill .skill_line .css p {
+  font-size: 2rem;
+  line-height: 8rem;
+}
+main .about .about_wrap .skill .skill_line .vue {
+  background: url(../img/skill5.png) no-repeat center/cover;
+  width: 7rem;
+  height: 7rem;
+  bottom: 3.5rem;
+  right: -4rem;
+}
+main .about .about_wrap .skill .skill_line .vue p {
+  font-size: 1.8rem;
+  line-height: 7rem;
+}
+main .about .about_wrap .skill .skill_line .html {
+  background: url(../img/skill6.png) no-repeat center/cover;
+  width: 7rem;
+  height: 7rem;
+  bottom: 3.5rem;
+  left: -4rem;
+}
+main .about .about_wrap .skill .skill_line .html p {
+  font-size: 1.8rem;
+  line-height: 7rem;
+}
+main .about .about_wrap .skill .skill_line .sass {
+  background: url(../img/skill7.png) no-repeat center/cover;
+  width: 6rem;
+  height: 6rem;
+  top: -1.5rem;
+  left: 11rem;
+}
+main .about .about_wrap .skill .skill_line .sass p {
+  font-size: 1.4rem;
+  line-height: 6rem;
+}
+main .about .about_wrap .skill .skill_line .bootstrap {
+  background: url(../img/skill8.png) no-repeat center/cover;
+  width: 6rem;
+  height: 6rem;
+  top: -3rem;
+  right: 29rem;
+}
+main .about .about_wrap .skill .skill_line .bootstrap p {
+  font-size: 1.4rem;
+  line-height: 6rem;
+}
+main .about .about_wrap .skill .skill_line .figma {
+  background: url(../img/skill9.png) no-repeat center/cover;
+  width: 6rem;
+  height: 6rem;
+  top: -1.5rem;
+  right: 11rem;
+}
+main .about .about_wrap .skill .skill_line .figma p {
+  font-size: 1.4rem;
+  line-height: 6rem;
+}
+main .contact {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contact .contact_wrap .h2 {
+  font-size: 10rem;
+  margin-bottom: 10rem;
+}
+main .contact .contact_wrap .contact_info {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin-bottom: 12.5rem;
+}
+main .contact .contact_wrap .contact_info .contact_phone p {
+  font-family: "Abel", sans-serif;
+  font-size: 3rem;
+  margin-top: 4.5rem;
+}
+main .contact .contact_wrap .contact_info .contact_mail p {
+  font-family: "Abel", sans-serif;
+  font-size: 3rem;
+  margin-top: 4.5rem;
+}
+main .contact:last-child {
+  font-family: "Abel", sans-serif;
+  font-size: 4rem;
+}
+
+.swiper-slide.blur {
+  filter: blur(0.3rem); /* 흐릿한 효과 */
+  opacity: 0.3;
+}
+
+@media (max-width:1500px) {
+  main .home .home_text {
+    font-size: 8rem;
+  }
+  main .home img {
+    width: 30rem;
+  }
+}
+@media (max-width:1200px) {
+  header nav .menu {
+    justify-content: center;
+    gap: 3rem;
+    margin-right: 0;
+  }
+  header nav .menu li a {
+    font-size: 4rem;
+    padding: 1rem;
+  }
+  header nav .menu li a:hover {
+    font-size: 5rem;
+  }
+  main .home .home_text {
+    font-size: 6rem;
+    line-height: 1.5;
+  }
+  main .project .swiper .swiper-slide {
+    width: 70rem;
+  }
+  main .project .swiper .swiper-slide img {
+    width: 50%;
+    object-fit: contain;
+  }
+  main .project .swiper .swiper-slide .project_text {
+    font-size: 2.8rem;
+    padding-right: 0;
+  }
+  main .project .swiper .swiper-slide .project_text .poroject_title b {
+    font-size: 5rem;
+  }
+  main .project .swiper .swiper-slide .project_text .project_tools {
+    font-size: 2.5rem;
+  }
+  main .project .swiper .swiper-slide .project_text .contribution {
+    font-size: 2.5rem;
+  }
+  main .project .swiper .swiper-slide .project_text .more {
+    padding: 1rem 4rem;
+    font-size: 2rem;
+  }
+  main .about .about_wrap {
+    width: 70rem;
+    padding: 5rem 6.5rem;
+  }
+  main .about .about_wrap .profile {
+    margin-bottom: 2rem;
+  }
+  main .about .about_wrap .profile .h2 {
+    margin-bottom: 2rem;
+  }
+  main .about .about_wrap .profile .profile_info img {
+    width: 16.5rem;
+    height: 22rem;
+    margin-right: 1rem;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text {
+    margin-top: 0;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p .pc_no {
+    display: block;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p span {
+    font-size: 2.5rem;
+  }
+  main .about .about_wrap .skill .h2 {
+    margin-bottom: 0rem;
+  }
+  main .about .about_wrap .skill .skill_line {
+    background: url(../img/skill_line_mo.png) no-repeat center/contain;
+    width: 55rem;
+    height: 25rem;
+    margin: auto;
+    transform: rotate(-15deg);
+  }
+  main .about .about_wrap .skill .skill_line > div {
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+    transform: rotate(15deg);
+  }
+  main .about .about_wrap .skill .skill_line > div p {
+    font-family: "Audiowide", sans-serif;
+    display: inline-block;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  main .about .about_wrap .skill .skill_line > div p.fade {
+    opacity: 1;
+  }
+  main .about .about_wrap .skill .skill_line .photoshop {
+    background: url(../img/skill1.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    top: -2rem;
+    left: 17rem;
+  }
+  main .about .about_wrap .skill .skill_line .photoshop p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .Javascript {
+    background: url(../img/skill2.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    bottom: -2.3rem;
+    left: 26rem;
+  }
+  main .about .about_wrap .skill .skill_line .Javascript p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .Jquery {
+    background: url(../img/skill3.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    bottom: 0rem;
+    right: 8rem;
+  }
+  main .about .about_wrap .skill .skill_line .Jquery p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .css {
+    background: url(../img/skill4.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    bottom: -0.5rem;
+    left: 10rem;
+  }
+  main .about .about_wrap .skill .skill_line .css p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .vue {
+    background: url(../img/skill5.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    bottom: 8rem;
+    right: -2.5rem;
+  }
+  main .about .about_wrap .skill .skill_line .vue p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .html {
+    background: url(../img/skill6.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    bottom: 7rem;
+    left: -2.5rem;
+  }
+  main .about .about_wrap .skill .skill_line .html p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .sass {
+    background: url(../img/skill7.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    top: 2rem;
+    left: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .sass p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .bootstrap {
+    background: url(../img/skill8.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    top: -2rem;
+    right: 18rem;
+  }
+  main .about .about_wrap .skill .skill_line .bootstrap p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+  main .about .about_wrap .skill .skill_line .figma {
+    background: url(../img/skill9.png) no-repeat center/cover;
+    width: 6rem;
+    height: 6rem;
+    top: 1rem;
+    right: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .figma p {
+    font-size: 1.4rem;
+    line-height: 6rem;
+  }
+}
+@media (max-width:768px) {
+  header nav .menu {
+    flex-direction: column;
+    height: 100vh;
+    visibility: hidden;
+    background: #000;
+  }
+  header nav .menu li a {
+    font-size: 7rem;
+  }
+  header nav .menu li a:hover {
+    color: rgb(92, 153, 51);
+    font-size: 10rem;
+  }
+  header .menu_btn {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  header .menu_btn span {
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 0.3rem;
+    position: absolute;
+  }
+  header .menu_btn span:nth-child(1) {
+    top: 0;
+  }
+  header .menu_btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header .menu_btn span:nth-child(3) {
+    bottom: 0;
+  }
+  header .menu_btn:hover {
+    transform: scale(1.1);
+  }
+  .menu_open header nav .menu {
+    visibility: visible;
+  }
+  .menu_open header .menu_btn span {
+    transition: 0.3s;
+  }
+  .menu_open header .menu_btn span:nth-child(1) {
+    top: 1.1rem;
+    transform: rotate(45deg);
+  }
+  .menu_open header .menu_btn span:nth-child(2) {
+    display: none;
+  }
+  .menu_open header .menu_btn span:nth-child(3) {
+    bottom: 1.1rem;
+    transform: rotate(-45deg);
+  }
+  .menu_open header .menu_btn:hover {
+    transform: scale(1.1);
+  }
+  main .home .home_text {
+    text-align: center;
+  }
+  main .home img {
+    display: none;
+  }
+  main .project .swiper .swiper-slide {
+    flex-direction: column;
+    width: 70rem;
+    text-align: center;
+  }
+  main .project .swiper .swiper-slide img {
+    width: 40%;
+    margin: auto;
+  }
+  main .project .swiper .swiper-slide .project_text {
+    text-align: center;
+    padding-right: 0;
+  }
+  main .project .swiper .swiper-slide .project_text .poroject_title {
+    margin-bottom: 2rem;
+  }
+  main .project .swiper .swiper-slide .project_text .poroject_title span {
+    margin-right: 1rem;
+  }
+  main .project .swiper .swiper-slide .project_text .project_tools {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  main .project .swiper .swiper-slide .project_text .contribution {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  main .project .swiper .swiper-slide .project_text .contribution span {
+    margin-right: 1rem;
+  }
+  main .project .swiper .swiper-slide .project_text .more {
+    padding: 1rem 4rem;
+    font-size: 2rem;
+  }
+  main .project .swiper .swiper-slide .project_text > p > span {
+    margin-right: 0;
+  }
+  main .project .swiper .swiper-pagination-bullet {
+    display: none;
+    background: #dfdfdf;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  main .about {
+    min-width: 50rem;
+  }
+  main .about .about_wrap {
+    width: 80%;
+    padding: 4rem;
+    text-align: center;
+  }
+  main .about .about_wrap .profile {
+    margin-bottom: 1rem;
+  }
+  main .about .about_wrap .profile .h2 {
+    margin-bottom: 3rem;
+  }
+  main .about .about_wrap .profile .profile_info {
+    display: block;
+  }
+  main .about .about_wrap .profile .profile_info img {
+    display: none;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text {
+    margin-top: 0;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p .pc_no {
+    display: block;
+  }
+  main .about .about_wrap .profile .profile_info .profile_info_text p span {
+    font-size: 2.5rem;
+  }
+  main .about .about_wrap .skill .h2 {
+    margin-bottom: 0rem;
+  }
+  main .about .about_wrap .skill .skill_line {
+    background: url("../img/skill_line_mo1.png") no-repeat center/contain;
+    width: 30rem;
+    margin: 3rem auto 0;
+    transform: none;
+  }
+  main .about .about_wrap .skill .skill_line > div {
+    transform: none;
+  }
+  main .about .about_wrap .skill .skill_line .photoshop {
+    width: 5rem;
+    height: 5rem;
+    top: -1.5srem;
+    left: 9rem;
+  }
+  main .about .about_wrap .skill .skill_line .photoshop p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .Javascript {
+    width: 5rem;
+    height: 5rem;
+    bottom: -2.8rem;
+    left: 12rem;
+  }
+  main .about .about_wrap .skill .skill_line .Javascript p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .Jquery {
+    width: 5rem;
+    height: 5rem;
+    bottom: 0.5rem;
+    right: 4.5rem;
+  }
+  main .about .about_wrap .skill .skill_line .Jquery p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .css {
+    width: 5rem;
+    height: 5rem;
+    bottom: 1rem;
+    left: 3rem;
+  }
+  main .about .about_wrap .skill .skill_line .css p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .vue {
+    width: 5rem;
+    height: 5rem;
+    bottom: 7rem;
+    right: 0.3rem;
+  }
+  main .about .about_wrap .skill .skill_line .vue p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .html {
+    width: 5rem;
+    height: 5rem;
+    bottom: 8rem;
+    left: -1rem;
+  }
+  main .about .about_wrap .skill .skill_line .html p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .sass {
+    width: 5rem;
+    height: 5rem;
+    top: 3rem;
+    left: 2rem;
+  }
+  main .about .about_wrap .skill .skill_line .sass p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .bootstrap {
+    width: 5rem;
+    height: 5rem;
+    top: -1rem;
+    right: 7rem;
+  }
+  main .about .about_wrap .skill .skill_line .bootstrap p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .about .about_wrap .skill .skill_line .figma {
+    width: 5rem;
+    height: 5rem;
+    top: 4.5rem;
+    right: 1rem;
+  }
+  main .about .about_wrap .skill .skill_line .figma p {
+    font-size: 1.4rem;
+    line-height: 5rem;
+  }
+  main .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .contact .contact_wrap .h2 {
+    font-size: 5rem;
+    margin-bottom: 10rem;
+  }
+  main .contact .contact_wrap .contact_info {
+    flex-direction: column;
+    gap: 10rem;
+    margin-bottom: 12.5rem;
+  }
+  main .contact .contact_wrap .contact_info .contact_phone p {
+    font-family: "Abel", sans-serif;
+    font-size: 3rem;
+    margin-top: 4.5rem;
+  }
+  main .contact .contact_wrap .contact_info .contact_mail p {
+    font-family: "Abel", sans-serif;
+    font-size: 3rem;
+    margin-top: 4.5rem;
+  }
+  main .contact:last-child {
+    font-family: "Abel", sans-serif;
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

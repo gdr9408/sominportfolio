@@ -1,0 +1,34 @@
+.rel {
+  position: relative;
+}
+
+  /*
+  figure {
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%;
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      transition: 0.3s ease-in;
+    }
+  }
+      */
+
+.h2 {
+  font-family: $audiowide;
+  font-size: 4rem;
+
+  @media #{$pc1} {
+    font-size: 3.2rem;
+  }
+  @media #{$tablet} { 
+    font-size: 3rem;
+    
+  }
+}
+
+
